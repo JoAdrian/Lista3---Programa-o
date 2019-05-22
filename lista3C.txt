@@ -1,0 +1,674 @@
+Respostas da lista 3
+
+Componentes:
+Jó Adrian de Souza Ferreira
+Nohanna Medeiros de Lima
+
+1. 
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int i;
+    int soma = 0;
+    for(i = 0; i <= 100; i++){
+        soma = soma + i;
+    }
+    printf("A soma e: %d\n", soma);
+    return 0;
+}
+
+2. 
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int i;
+    for(i = 0; i < 200; i++){
+        if(i%7 == 0){
+            printf("%d\n", i);
+        }
+    }
+    return 0;
+}
+
+3.
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int i;
+    for(i = 0; i < 100; i++){
+        if(i%4 == 0){
+            printf("%d\n", i);
+        }
+    }
+    return 0;
+}
+
+4.
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int n, i;
+    printf("Digite um numero qualquer: \n");
+    scanf("%d", &n);
+    printf("Os divisores de %d são: \n\n\n", n);
+    for(i = n; i > 0; i--){
+        if(n%i == 0){
+            printf("%d\n", i);
+        }
+    }
+    return 0;
+}
+
+5.
+#include <stdio.h>
+#include <stdlib.h>
+int fatorial(int n){
+    int contador = 1;
+    int i;
+    for(i = n; i > 1; i--){
+        contador = contador*i;
+    }
+    return contador;
+}
+int main() {
+    int n;
+    printf("Digite um numero: ");
+    scanf("%d", &n);
+    printf("O fatorial de %d e: %d", n, fatorial(n));
+    return 0;
+} 
+
+6.
+#include <stdio.h>
+#include <stdlib.h>
+void menor(int n){
+    int i;
+    for(i = 1; i <= n; i++){
+        if(i*i > n){
+            printf("O menor numero cujo quadrado e maior que %d e: %d", n, i);
+            i = n+1;
+        }
+    }
+}
+int main() {
+    int n;
+    printf("Digite um numero: ");
+    scanf("%d", &n);
+    menor(n);
+    return 0;
+} 
+
+7.
+int main() {
+    float i;
+    printf("~~~~~~~~~~ Tabuada do 4 ~~~~~~~~~~\n\n\n\n");
+    for(i = 1; i < 10; i++){
+        printf("4 + %6.2f = %6.2f\n", i, (4+i));
+    }
+    printf("\n\n");
+    for(i = 1; i < 10; i++){
+        printf("4 - %6.2f = %6.2f\n", i, (4-i));
+    }
+    printf("\n\n");
+    for(i = 1; i < 10; i++){
+        printf("4 x %6.2f = %6.2f\n", i, (4*i));
+    }
+    printf("\n\n");
+    for(i = 1; i < 10; i++){
+        printf("4 / %6.2f = %6.2f\n", i, (4/i));
+    }
+    return 0;
+}
+
+8.
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    float i, n;
+    printf("Digite um numero: \n");
+    scanf("%f", &n);
+    printf("~~~~~~~~~~ Tabuada do %6.2f ~~~~~~~~~~\n\n\n\n", n);
+    for(i = 1; i < 10; i++){
+        printf("%6.2f + %6.2f = %6.2f\n", n, i, (n+i));
+    }
+    printf("\n\n");
+    for(i = 1; i < 10; i++){
+        printf("%6.2f - %6.2f = %6.2f\n", n, i, (n-i));
+    }
+    printf("\n\n");
+    for(i = 1; i < 10; i++){
+        printf("%6.2f x %6.2f = %6.2f\n", n, i, (n*i));
+    }
+    printf("\n\n");
+    for(i = 1; i < 10; i++){
+        printf("%6.2f / %6.2f = %6.2f\n", n, i, (n/i));
+    }
+    return 0;
+}   
+
+9.
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int i, contador, soma;
+    float media;
+    contador = 0;
+    soma = 0;
+    
+    for(i = 13; i < 73; i++){
+        if(i%2 == 0){
+            soma = soma + i;
+            contador++;
+        }
+        if(i == 72){
+            media = soma / contador;
+            printf("A media aritmetica e: %6.2f\n", media);
+        }
+    }
+    return 0;
+}
+
+10.
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int i, n;
+    int contadorDentro, contadorFora;
+    contadorDentro = 0;
+    contadorFora = 0;
+    for(i = 0; i < 10; i++){
+        printf("Digite um numero: \n");
+        scanf("%d", &n);
+        if((n >= 10) && (n <= 50)){
+            contadorDentro++;
+        } else {
+            contadorFora++;
+        }
+    }
+    if(contadorDentro == 1){
+        printf("Apenas 1 numero esta dentro do intervalo [10,50].\n");
+        printf("Exisem 9 numeros fora do intervalo [10,50].\n");
+    } else if(contadorFora == 1){
+        printf("Apenas 1 numero esta fora do intervalo [10,50].\n");
+        printf("Exisem 9 numeros dentro do intervalo [10,50].\n");
+    } else {
+        printf("Existem %d numeros dentro do intervalo [10,50].\n", contadorDentro);
+        printf("Exisem %d numeros fora do intervalo [10,50].\n", contadorFora);
+    }
+    return 0;
+}    
+
+11.
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int n, i, bool;
+    printf("Digite um numero:\n");
+    scanf("%d", &n);
+    bool = 0;
+    i = 2;
+    if(n == 1){
+        printf("E primo");
+    } else {
+        while((bool == 0) && (i<n)){
+            if(n%i == 0){
+                printf("Não e primo");
+                bool = 1;
+            }
+          i++;
+        }
+        if(bool == 0){
+           printf("E primo");
+        }
+    }
+    return 0;
+}  
+
+12.
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    
+    int x1 = 0, x2 = 0;
+    int cont = 0, i = 0;
+    
+    for(int a = 1; a <= 100; a++){
+        cont = 0;
+        for(int b = 1; b <= 100; b++){
+            if(a%b == 0){
+                cont++;
+            }
+        }
+        if(cont == 2){
+            i++;
+            if(i == 6){
+                x1 = a;
+            }
+            if(i == 12){
+                x2 = a;
+                break;
+            }
+        }
+    }
+    int d = x2 - x1;
+    printf("A diferenca e: %d\n", d);
+    return 0;
+}
+
+13.
+int main() {
+    int fib1 = 0;
+    int fib2 = 1;
+    int fib3;
+    int i, n;
+    printf("Digite um numero: ");
+    scanf("%d", &n);
+    if (n == 1) {
+        printf("O primeiro numero da serie de Fibonacci e: 0\n");
+    } else if (n == 2) {
+        printf("Os 2 primeiros numeros da serie de Fibonacci sao: 0 1\n");
+    } else {
+        printf("Os %d primeiros numeros da serie de Fibonacci sao: \n", n);
+        for (i = 0; i < n - 2; i++) {
+            if (fib1 == 0) {
+                printf("0 1 ");
+            }
+            fib3 = fib1 + fib2;
+            printf("%d ", fib3);
+            fib1 = fib2;
+            fib2 = fib3;
+        }
+    }
+    return 0;
+}
+
+14.
+int main() {
+    int i;
+    int cont = 0;
+        for(i = 1000; i <= 1999; i++){
+            if(i%11 == 5){
+                printf("%d ", i);
+                cont++;
+            }
+            if(cont == 20){
+                break;
+            }
+        }
+    return 0;
+}
+
+15.
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    char texto[100];
+    printf("Digite um pequeno texto: ");
+    scanf("%s", texto);
+    printf("%s\n", texto);
+    int soma = 0;
+    int i;
+    for (i = 0; i <= 100; i++) {
+        if (texto[i] == 0) {
+            break;
+        } else {
+            if ((texto[i] == 65) || (texto[i] == 97)) {
+                soma = soma + 1;
+            }
+        }
+    }
+    printf("A quantidade de 'A' ou 'a' e: %d\n", soma);
+    return 0;
+}
+
+16.
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+    char texto[50], inverso[50];
+    int i, j;
+    printf("Digite um texto: \n");
+    scanf("%s", texto);
+    j = strlen(texto) - 1;
+    for(i = 0; i < strlen(texto); i++){
+        inverso[j] = texto[i];
+        j--;
+    }
+    inverso[i] = '\0';
+    printf("%s\n", inverso);
+    return 0;
+}
+
+17.
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+    float cel, f;
+    printf("Digite a temperatura em graus celsius: \n");
+    scanf("%f", &cel);
+    f = 32 + (cel/5)*9;
+    printf("A conversao de %6.2f°C para Farenheit, e: %6.2f\n", cel, f);
+    return 0;
+}
+
+18.
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+    float cel, f;
+    printf("Digite a temperatura em graus farenheit: \n");
+    scanf("%f", &f);
+    cel = ((5*f)-160)/9;
+    printf("A conversao de %6.2f°F para Celsius, e: %6.2f\n", f, cel);
+    return 0;
+}
+
+19.
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int funcAleatorio(int a, int b){
+    int x;
+    x = a + rand()%b;
+    return x;
+}
+
+int main() {
+    int a, b, x;
+    printf("Digite dois valores A e B, nessa ordem, de forma que [A, B] seja um intervalo no qual será gerado um numero aleatorio: \n");
+    scanf("%d", &a);
+    scanf("%d", &b);
+    
+    printf("Um numero aleatorio entre %d e %d, e: %d", a, b, funcAleatorio(a, b));
+    
+    return 0;
+}
+
+20.
+#include <stdio.h>
+void func(int a){
+  int i, j, cont;
+  cont = 0;
+  for(i = 1; i <= a; i++){
+    cont = 0;
+    for(j = 1; j <= i; j++){
+      if(i%j == 0){
+        cont++;
+      }
+    }
+    if(cont == 1){
+      printf("%d eh fator primo de %d\n", i, a);
+    } else if(cont == 2){
+      if(a%i == 0){
+        printf("%d eh fator primo de %d\n", i, a);
+      }
+    }
+  }
+}
+int main(void) {
+  int n;
+  printf("Digite um numero: ");
+  scanf("%d", &n);
+  printf("~~~~~~~~~~Fatores primos~~~~~~~~~~\n");
+  func(n);
+  return 0;
+}
+
+21.
+#include <stdio.h>
+void func(int a[100]){
+  int i, j, n;
+  n = 0;
+  for(i = 0; i <= 100; i++){
+    n = a[i];
+    if(a[i] == 0){
+      break;
+    } else {
+      for(j = 0; j < n; j++){
+      printf("*");
+    }
+    
+    }
+    printf("\n");
+  }
+}
+
+int main(void) {
+  int v[100];
+  int boole = 0;
+  int i, condicao;
+  while(boole == 0){
+    for(i = 0; boole == 0; i++){
+      printf("Digite um valor para o array: ");
+      scanf("%d", &v[i]);
+      printf("Digite '1' para a adicionar mais um valor ou qualquer outro numero para sair\n");
+      scanf("%d", &condicao);
+      if(condicao == 1){
+        boole = 0;
+      } else if(condicao != 1){
+        v[i+1] = 0;
+        boole = 1;
+      }
+    }
+  }
+  func(v);
+  return 0;
+}
+
+22.
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+    int v[] = {4, 5, 6, 1, 7};
+    int max, n, i, j;
+    n = 5;
+    max = v[0];
+    for(i = 1; i < n; i++){
+        if(v[i] > max){
+            max = v[i];
+        }
+    }
+    int v2[max][n];
+    for(j = 0; j < n; j++){
+        for(i = 0; i < max; i++){
+            if(i < max - v[j]){
+                v2[i][j] = 0;
+            } else {
+                v2[i][j] = 1;
+            }
+        }
+    }
+    for(i = 0; i < max; i++){
+        for(j = 0; j < n; j++){
+            if(v2[i][j] == 0){
+                printf(" ");
+            } else {
+                printf("*");
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+23.
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+    char frase[50];
+    int tam, i, verf;
+    verf = 0;
+    printf("Digite uma frase: \n");
+    fgets(frase, 50, stdin); 
+    tam = strlen(frase) - 1;
+    if(tam == 1){
+        if(frase[0] == 32){
+            printf("A frase digitada nao tem nenhuma palavra\n");
+        } else{
+            printf("A frase digitada tem 1 palavra\n");
+        }
+    } else if(tam == 2){
+        if(frase[0] == 32){
+            if(frase[1] != 32){
+                printf("A frase digitada tem 1 palavra\n");
+            } else {
+                printf("A frase digitada nao tem nenhuma palavra\n");
+            }
+        } else {
+            if(frase[1] != 32){
+                printf("A frase digitada tem 2 palavras\n");
+            } else {
+                printf("A frase digitada tem 1 palavra\n");
+            }
+        }
+    } else if(tam >= 3){
+        for(i = 1; i < tam; i++){
+            if(frase[i] == 32){
+                if(frase[i - 1] != 32){
+                    verf++;
+                }
+            }
+            if(i == tam - 1){
+                if(frase[i] != 32){
+                    verf++;
+                }
+            }
+        }
+        printf("A frase tem %d palavras\n", verf);
+    }
+    printf("O tamanho da frase eh: %d\n", tam);
+    return 0;
+}
+
+24.
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void reverse(char v[50]){
+    int i, j;
+    char inverso[50];
+    j = strlen(v) - 1;
+    for(i = 0; i < strlen(v); i++){
+        inverso[j] = v[i];
+        j--;
+    }
+    inverso[i] = '\0';
+    printf("%s\n", inverso);
+}
+
+int main() {
+    char n[50] = "Teste";
+    reverse(n);
+    return 0;
+}
+
+25.
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+    char frase[50];
+    int ww;
+    int a = 0, b = 0, c = 0, d = 0, e = 0, f = 0, g = 0, h = 0, i = 0, j = 0, k = 0, l = 0
+    , m = 0, n = 0, o = 0, p = 0, q = 0, r = 0, s = 0, t = 0, u = 0, v = 0, w = 0, x = 0, y = 0, z = 0;
+    printf("Digite uma frase: ");
+    fgets(frase, 50, stdin);
+    for(ww = 0; ww < 50; ww++){
+        if(frase[ww] == 0){
+            break;
+        }
+        if((frase[ww] == 65) || (frase[ww] == 97)){
+            a++;
+        } else if((frase[ww] == 66) || (frase[ww] == 98)){
+            b++;
+        } else if((frase[ww] == 67) || (frase[ww] == 99)){
+            c++;
+        } else if((frase[ww] == 68) || (frase[ww] == 100)){
+            d++;
+        } else if((frase[ww] == 69) || (frase[ww] == 101)){
+            e++;
+        } else if((frase[ww] == 70) || (frase[ww] == 102)){
+            f++;
+        } else if((frase[ww] == 71) || (frase[ww] == 103)){
+            g++;
+        } else if((frase[ww] == 72) || (frase[ww] == 104)){
+            h++;
+        } else if((frase[ww] == 73) || (frase[ww] == 105)){
+            i++;
+        } else if((frase[ww] == 74) || (frase[ww] == 106)){
+            j++;
+        } else if((frase[ww] == 75) || (frase[ww] == 107)){
+            k++;
+        } else if((frase[ww] == 76) || (frase[ww] == 108)){
+            l++;
+        } else if((frase[ww] == 77) || (frase[ww] == 109)){
+            m++;
+        } else if((frase[ww] == 78) || (frase[ww] == 110)){
+            n++;
+        } else if((frase[ww] == 79) || (frase[ww] == 111)){
+            o++;
+        } else if((frase[ww] == 80) || (frase[ww] == 112)){
+            p++;
+        } else if((frase[ww] == 81) || (frase[ww] == 113)){
+            q++;
+        } else if((frase[ww] == 82) || (frase[ww] == 114)){
+            r++;
+        } else if((frase[ww] == 83) || (frase[ww] == 115)){
+            s++;
+        } else if((frase[ww] == 84) || (frase[ww] == 116)){
+            t++;
+        } else if((frase[ww] == 85) || (frase[ww] == 117)){
+            u++;
+        } else if((frase[ww] == 86) || (frase[ww] == 118)){
+            v++;
+        } else if((frase[ww] == 87) || (frase[ww] == 119)){
+            w++;
+        } else if((frase[ww] == 88) || (frase[ww] == 120)){
+            x++;
+        } else if((frase[ww] == 89) || (frase[ww] == 121)){
+            y++;
+        } else if((frase[ww] == 90) || (frase[ww] == 122)){
+            z++;
+        } 
+    }
+    printf("Tem %d letras 'a' (ou 'A')\n", a);
+    printf("Tem %d letras 'b' (ou 'B')\n", b);
+    printf("Tem %d letras 'c' (ou 'C')\n", c);
+    printf("Tem %d letras 'd' (ou 'D')\n", d);
+    printf("Tem %d letras 'e' (ou 'E')\n", e);
+    printf("Tem %d letras 'f' (ou 'F')\n", f);
+    printf("Tem %d letras 'g' (ou 'G')\n", g);
+    printf("Tem %d letras 'h' (ou 'H')\n", h);
+    printf("Tem %d letras 'i' (ou 'I')\n", i);
+    printf("Tem %d letras 'j' (ou 'J')\n", j);
+    printf("Tem %d letras 'k' (ou 'K')\n", k);
+    printf("Tem %d letras 'l' (ou 'L')\n", l);
+    printf("Tem %d letras 'm' (ou 'M')\n", m);
+    printf("Tem %d letras 'n' (ou 'N')\n", n);
+    printf("Tem %d letras 'o' (ou 'O')\n", o);
+    printf("Tem %d letras 'p' (ou 'P')\n", p);
+    printf("Tem %d letras 'q' (ou 'Q')\n", q);
+    printf("Tem %d letras 'r' (ou 'R')\n", r);
+    printf("Tem %d letras 's' (ou 'S')\n", s);
+    printf("Tem %d letras 't' (ou 'T')\n", t);
+    printf("Tem %d letras 'u' (ou 'U')\n", u);
+    printf("Tem %d letras 'v' (ou 'V')\n", v);
+    printf("Tem %d letras 'w' (ou 'W')\n", w);
+    printf("Tem %d letras 'x' (ou 'X')\n", x);
+    printf("Tem %d letras 'y' (ou 'Y')\n", y);
+    printf("Tem %d letras 'z' (ou 'Z')\n", z);
+    return 0;
+}
