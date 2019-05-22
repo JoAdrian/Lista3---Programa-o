@@ -1,2 +1,2 @@
-# Lista3---Programa-o
+# Lista3---Programacao
 Questões da lista 3 de programação
